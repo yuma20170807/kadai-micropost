@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get :followings
       get :followers
       #-----課題-----
-      get :favoritings
+      get :likes
       #--------------
     end
   end
@@ -27,6 +27,5 @@ Rails.application.routes.draw do
   
   #-----課題-----
   resources :favorites, only: [:create, :destroy]
-  get 'user/:id/likes', to: 'users#favoritings', as:'likes'
   #--------------
 end
